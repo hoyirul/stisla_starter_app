@@ -91,7 +91,6 @@ class _AuthLoginState extends State<AuthLogin> {
                     Map body = {
                       'email': emailController.text.trim(),
                       'password': passwordController.text,
-                      'device_name': 'mobile'
                     };
 
                     final url = Uri.parse(UrlHelper().baseUrl + UrlHelper().login);
@@ -346,7 +345,7 @@ class _AuthRegisterState extends State<AuthRegister> {
                   const Text('Belum punya akun? '),
                   InkWell(
                     onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => const AuthRegister()));
+                      Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => const AuthLogin()));
                     },
                     child: const Text('Masuk', style: TextStyle(
                       color: Colors.green
